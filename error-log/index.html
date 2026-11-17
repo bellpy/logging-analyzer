@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner Error Log</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Scannerfejl</h1>
+            <p>Noter fejl som de sker og gør Søren glad.</p>
+        </header>
+
+        <section class="error-form">
+
+            <div class="form-group">
+                <label for="scanner">Scanner</label>
+
+                <select id="scanner">
+                    <option value="">Vælg scanner</option>
+                    <option value="Cobra 1">Cobra 1</option>
+                    <option value="Cobra 2">Cobra 2</option>
+                    <option value="Cobra 3">Cobra 3</option>
+                    <option value="Cobra 4">Cobra 4</option>
+                    <option value="Cobra 5">Cobra 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="error-type">Fejltype</label>
+
+                <select id="error-type">
+                    <option value="">Vælg fejltype</option>
+                    <option value="Lighting error">Belysningsfejl</option>
+                    <option value="Finger error">Fingerfejl</option>
+                    <option value="Other">Andet</option>
+                </select>
+            </div>
+
+            <button id="log-error">
+                Noter fejl
+            </button>
+
+        </section>
+
+        <section class="log-section">
+            <div class="log-header">
+                <h2>Error Log</h2>
+            </div>
+        
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scanner</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Error Type</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody id="error-log">
+                        <!-- Errors will be here -->
+                    </tbody>
+                </table>
+        
+                <p id="empty-message" class="empty-message">
+                    Ingen fejl er blevet noteret endnu
+                </p>
+            </div>
+        
+            <div class="log-actions">
+                <button id="export-log" class="secondary-button" type="button">
+                    Export CSV
+                </button>
+        
+                <button id="clear-log" class="secondary-button" type="button">
+                    Clear Log
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
